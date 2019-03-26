@@ -7,7 +7,6 @@ Created on Tue Mar 26 16:30:29 2019
 
 lib = __import__('1174042csv')
 
-lib.bukaModeListCsv()
 lib.bukaModeDictCsv()
 
 lib.tulisCsv()
