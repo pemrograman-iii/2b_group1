@@ -8,17 +8,11 @@ Created on Tue Mar 26 16:28:34 2019
 import csv
 
 #Jawaban No. 1
-with open('1174042teori.csv') as csv_file:
+def bukaModeListCsv():
+    with open('1174042teori.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
-        line_count = 0
         for row in csv_reader:
-            if line_count == 0:
-                print(f'Kolom nya adalah {", ".join(row)}')
-                line_count += 1
-            else:
-                print(f'\t{row[0]} kerja di {row[1]} lahir pada bulan {row[2]}.')
-                line_count += 1
-                print(f'Processed {line_count} lines.')
+            print(row[0], row[1], row[2])
 
 #Jawaban No. 2            
 def bukaModeDictCsv():
