@@ -20,11 +20,11 @@ def PandasNameAttribute():
 def PandasWrite():
 	df = pd.read_csv('chap4_1174035_csv.csv', index_col='NPM')
 	df.to_csv('chap4_1174035_csv_pandaswrite.csv')
-PandasModeList()
-PandasModeDict()
-PandasDateToStandardDT()
-PandasIndexCol()
-PandasNameAttribute()
-PandasWrite()
+#PandasModeList()
+#PandasModeDict()
+#PandasDateToStandardDT()
+#PandasIndexCol()
+#PandasNameAttribute()
+#PandasWrite()
 
 	
