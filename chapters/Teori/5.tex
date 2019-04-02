@@ -38,3 +38,126 @@
 
 	\subsection{Soal 7}
 	Untuk membuat fungsi yang menggunakan pyserial kita hanya perlu untuk menginisialisasi pembubatan funsi dengan menggunakan def namafungsi() : lalu masukkan pyserial tersebut dengan indentasi. atau cukup dengan menggunakan fungsi while loop degan menggunakan while true:
+	
+\section{Luthfi Muhammad Nabil/1174035}
+\subsection{Soal 1}
+Apa itu fungsi device manager di windows dan /dev di linux :
+\begin{itemize}
+	\item Device Manager merupakan panel kontrol pada sistem operasi windows. Pengguna dapat mengontrol dan melihat perangkat yang  telah terhubung dengan komputer dengan device manager. 
+	Untuk setiap perangkat, pengguna dapat : 
+		\begin{itemize}
+			\item Memperbolehkan perangkat untuk beroperasi
+			\item Menginformasikan sistem operasi untuk melakukan aksi pada perangkat yang tidak berfungsi
+			\item Menginstall driver untuk perangkat yang terhubung
+			\item Melihat informasi dari perangkat
+		\end{itemize}
+	\item /dev merupakan lokasi dari file untuk perangkat. /dev berfungsi untuk menampung data - data sebuah perangkat yang terhubung pada komputer. Perangkat yang dapat terhubung diantaranya perangkat penyimpanan data dan perangkat pengiriman data.
+\end{itemize}
+
+\subsection{Soal 2}
+Jelaskan langkah - langkah instalasi driver dari arduino : 
+
+Untuk instalasi driver, biasanya akan langsung terinstall jika sudah menginstall arduino IDE Seperti contoh meminta instalasi untuk arduino pada gambar \ref{PopUpInstalasi}.
+\begin{figure} [ht]
+		\centerline{\includegraphics[width=1\textwidth]{figures/5/1174035/Teori/PopUpInstalasi.png}}
+		\caption{Pop Up saat instalasi Arduino IDE}
+		\label{PopUpInstalasi}
+\end{figure}
+Jika memang tidak ditemukan, maka ikuti langkah berikut : 
+Yang dibutuhkan : 
+\begin{itemize}
+	\item Arduino Driver
+	\item Arduino Jenis Apapun
+\end{itemize}
+Cara Instalasi : 
+\begin{enumerate}
+	\item Hubungkan arduino ke komputer (untuk arduino uno dapat menggunakan kabel type B)
+	\begin{figure} [ht]
+		\centerline{\includegraphics[width=0.6\textwidth]{figures/5/1174035/Teori/Soal1Step1.jpeg}}
+		\caption{Hubungkan arduino dengan komputer}
+		\label{Soal1Step1}
+	\end{figure}
+	\item Lalu setelah muncul popup instalasi driver akan terinstal secara otomatis. 
+	\item Jika instalasi otomatis gagal, buka device manager.
+		\begin{figure} [ht]
+			\centerline{\includegraphics[width=1\textwidth]{figures/5/1174035/Teori/DeviceManagerContoh.png}}
+			\caption{Tampilan Device Manager}
+			\label{DevManagerContoh}
+		\end{figure}
+	\item Setelah device manager terbuka, cari perangkat lainnya/tidak diketahui (other device).
+	\item Klik kanan perangkat yang tidak diketahui lalu pilih update driver.
+	\item Pilih Cari driver (Browse my computer for driver software).
+	\item Pilih lokasi driver ke driver yang telah didownload lalu klik next/ok.
+	\item Setelah muncul pop up instalasi, tekan install.
+	\item Instalasi Sukses
+\end{enumerate}
+
+\subsection{Soal 3}
+Jelaskan bagaimana membaca baudrate dan port dari komputer yang sudah terinstall driver : 
+\begin{itemize}
+	\item Port : Untuk membaca port, dapat membuka file/lokasi berikut :
+	
+Arduino IDE : 
+	\begin{figure} [ht]
+			\centerline{\includegraphics[width=0.6\textwidth]{figures/5/1174035/Teori/PortArduinoIDE.png}}
+			\caption{Port dari Arduino IDE}
+			\label{IDEPorts}
+		\end{figure}
+		\begin{enumerate}
+			\item Buka Arduino IDE
+			\item Lalu masuk ke Tools->Ports
+			\item Akan muncul port serial untuk arduino seperti pada gambar \ref{IDEPorts}
+		\end{enumerate}
+Device Manager : 
+	\begin{figure} [ht]
+			\centerline{\includegraphics[width=0.6\textwidth]{figures/5/1174035/Teori/PortDeviceManager.png}}
+			\caption{Port dari Device Manager}
+			\label{DevManPort}
+		\end{figure}
+		\begin{enumerate}
+			\item Buka Device Manager pada windows
+			\item Cari Perangkat dengan nama Arduino
+			\item Lalu lihat port berapa yang dipakai oleh Arduino Tersebut seperti pada gambar \ref{DevManPort}
+		\end{enumerate}		
+	\item Baudrate : Untuk melihat baudrate, dapat buka serial monitor dan cek baudrate dan tampilan fix pada tampilan serial monitor. Untuk setting default biasanya diantara 9600 dan 115200.
+	\begin{figure} [ht]
+			\centerline{\includegraphics[width=0.6\textwidth]{figures/5/1174035/Teori/Baudrate.png}}
+			\caption{Baud Rate}
+			\label{BaudRate}
+		\end{figure}
+\end{itemize}
+
+\subsection{Soal 4}
+Sejarah PySerial : 
+
+PySerial dibuat secara public pertama kali pada tahun 2002 dengan rilisan versi pertama 1.0. Pada saat itu PySerial sudah dapat membaca line serial dan menghapus semua isi dari serial tetapi belum dapat mengkonversi isi serial menjadi tipe data lain. PySerial juga sudah dapat melakukan Exception untuk proses yang terdapat error. Lalu pada tahun 2003 dirilis versi yang dapat mengkonversi data ke bilangan bulat, suppert terhadap python versi 2.2+ dan getter setter. Mulai pada tahun 2008, diberlakukan fitur iterasi untuk dapat mengambil seluruh data yang muncul pada serial yang diusulkan oleh Bernhard Bender. Kemudian pada tahun 2011, mulai dapat melihat daftar port yang terhubung dengan serial. Sampai akhirnya telah muncul versi 3.4 pada tahun 2017 yang sudah memperbaiki bug - bug yang ada.
+
+\subsection{Soal 5}
+Jelaskan fungsi - fungsi yang ada di pyserial.
+\begin{itemize}
+	\item \begin{verbatim}open()\end{verbatim} 
+	Fungsi untuk membuka port serial yang terhubung
+	\item \begin{verbatim}close()\end{verbatim} 
+	Fungsi untuk menutup port serial yang terhubung
+	\item \begin{verbatim}read(size=1) \end{verbatim}
+	Fungsi untuk menentukan ukuran serial yang dapat dibaca
+	\item \begin{verbatim}read\_until(expected=LF, size=None) \end{verbatim}
+	Fungsi untuk membaca serial sampai sequence yang ditentukan sudah dapat.
+	\item \begin{verbatim}write(data) \end{verbatim}
+	Fungsi untuk menulis data ke perangkat yang terhubung.
+	\item \begin{verbatim}flush() \end{verbatim}
+	Fungsi untuk menghapus seluruh data yang ditampilkan di serial.
+	\item \begin{verbatim}readline(size=-1) \end{verbatim}
+	Untuk membaca setiap line pada tampilan yang ada pada serial
+	\item \begin{verbatim}writelines(lines) \end{verbatim}
+	Sama halnya dengan write yaitu untuk menulis data ke perangkat yang terhubung.
+\end{itemize}
+\subsection{Soal 6}
+Jelaskan mengapa butuh perulangan dalam membaca serial : 
+
+Karena perulangan digunakan untuk membaca seluruh data pada serial yang ada setiap baris. Perulangan digunakan agar data dapat muncul secara terus menerus atau realtime. Dalam konsep berjalannya sebuah microcontroller, proses yang ada akan dijalankan secara terus menerus sampai proses meminta atau processor meminta untuk memberhentikan proses tersebut sehingga jika tidak memakai perulangan, maka data yang diambil hanyalah data dimana sintaks untuk meminta data itu dipanggil. 
+\subsection{Soal 7}
+Jelaskan cara membuat fungsi yang menggunakan pyserial : 
+
+Untuk membuat fungsi yang menggunakan pyserial, cukup dengan menuliskan fungsi dari pyserial dan menggunakannya dalam fungsi yang dibuat. Seperti contoh fungsi yang menggunakan PySerial : 
+\lstinputlisting{src/5/1174035/Teori/chap5_1174035_teori.py}
