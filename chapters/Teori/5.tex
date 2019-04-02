@@ -161,3 +161,56 @@ Jelaskan cara membuat fungsi yang menggunakan pyserial :
 
 Untuk membuat fungsi yang menggunakan pyserial, cukup dengan menuliskan fungsi dari pyserial dan menggunakannya dalam fungsi yang dibuat. Seperti contoh fungsi yang menggunakan PySerial : 
 \lstinputlisting{src/5/1174035/Teori/chap5_1174035_teori.py}
+
+\section{Faisal Najib Abdullah}
+\subsection{Teori}
+\begin{enumerate}
+	\item Apa itu fungsi device manager di windows dan folder /dev di linux
+	\par
+		\begin{enumerate}
+		    \item Device Manager : Seperti namanya sendiri, device manager berfungsi untuk menampilkan dan mengelola semua hardware yang terinstall ataupun dapat di instalasi ke dalam windows.
+
+			\item folder /dev : Di dalam sistem operasi Linux, perangkat yang tehubung akan dianggap sebagai file. di dalam folder /dev inilah file - file  tersebut berada.
+		\end{enumerate}
+	
+	\item Jelaskan langkah-langkah instalasi driver dari arduino
+	\par
+		Langkah - langkah instalasi driver arduino :
+		\begin{enumerate}
+			\item Pertama download file driver arduino terlebih dahulu dan masukkan ke dalam directory yang diinginkan.
+			\item Hubungkan arduino uno anda ke pc anda dengan kabel USB yang tersedia.
+			\item Kemudian windows akan memunculkan pop up yang memberitahu bahwa ingin menginstall dirver, tapi nanti tidak akan menemukan drivernya.
+			\item Buka Device Manager dan cari unknown device di dalam Device Manager di dalam tab other device.
+			\item Klik kanan pada unknown device tersebut lalu pilih update driver software
+			\item Pilih browse my computer for driver software lalu masukkan directory dimana anda menyimpan driver arduino yang telah anda download tadi
+			\item Setelah itu klik install dan tunggu hingga proses selesai
+			\item Arduino pun sudah terbaca di pc anda 
+		\end{enumerate}
+	
+	\item Jelaskan bagaimana cara membaca baudrate dan port dari komputer yang sudah terinstall driver
+	\par
+	Untuk melihat atau membaca baudrate dan port kita hanya perlu menginstall Arduino IDE, setelah itu buka menu serial monitor yang berada di tab tools. Dari sana akan terlihat baik baudrate dan port yang sedang digunakan oleh arduin anda.
+	
+	\item Jelaskan sejarah library pyserial
+	\par
+	PySerial merupakan sebuah library yang digunakan untuk komunikasi ke port serial terutama untuk mikrokontroller. PySerial pertama kali diluncurkan pada tahun 2002 yang makin berkembang dalam setiap versinya hingga tahun 2017 lalu.
+	
+	\item Jelaskan fungsi-fungsi apa saja yang dipakai dari library pyserial
+		\begin{itemize}
+			\item \begin{verbatim}serial.to_bytes(sequence)\end{verbatim} : berfungsi untuk mengubah sequence ke dalam bytes agar dapat dikirim ke dalam arduino.
+			\item \begin{verbatim}stop()\end{verbatim} : untuk menghentikan pembacaan program
+			\item \begin{verbatim}open()\end{verbatim} : Fungsi untuk membuka port serial yang terhubung
+			\item \begin{verbatim}close()\end{verbatim} : Fungsi untuk menutup port serial yang terhubung
+			\item \begin{verbatim}read(size=1) \end{verbatim} : Fungsi untuk menentukan ukuran serial yang dapat dibaca
+			\item \begin{verbatim}close()\end{verbatim} : untuk menutup port dan menghentikan pembacaan program
+		\end{itemize}
+	
+	\item Jelaskan kenapa butuh perulangan dalam tidak butuh perulangan dalam membaca serial
+	\par
+	Dengan menggunakan pengulangan kita dapat mengambil data berkali - kali tanpa harus mengeksekusi file python tersebut berulang - ulang. Tanpa perulangan juga penting karena dapat digunakan di saat saat tertentu seperti jika ingin mengukur suhu ruangan yang hanya dilakukan pada saat saat tertentu tidak terus menerus.
+	
+	\item Jelaskan bagaimana cara membuat fungsi yang mengunakan pyserial
+	\par
+	Untuk membuat fungsi yang menggunakan pyserial kita hanya perlu untuk menginisialisasi pembubatan funsi dengan menggunakan def namafungsi() : lalu masukkan pyserial tersebut dengan indentasi. atau cukup dengan menggunakan fungsi while loop degan menggunakan while true:
+	
+\end{enumerate}
