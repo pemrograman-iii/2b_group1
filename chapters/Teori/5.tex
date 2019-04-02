@@ -348,3 +348,95 @@ Jelaskan bagaimana cara membuat fungsi yang mengunakan pyserial!
 \hfill \break
 Fungsi yang berada pada Python, dibuat dengan nama kata kunci def kemudian diikuti dengan nama fungsinya pada pyhton.
 Seperti halnya dengan blok kode yang lain, kita juga harus memberikan identasi untuk menuliskan isi fungsi.
+
+\section{Dika Sukma Pradana 1174050}
+	\subsection{Pemahaman Teori}
+		\begin{enumerate}
+			\item Apa itu fungsi device manager di windows dan folder /dev di linux?
+				\par
+				Device manager merupakan perangkat lunak untuk menampilkan seluruh perangkat keras yang di-inisialisasi atau dikenali oleh sistem operasi Windows. Device Manager membantu dalam mengelola atau me-manage semua perangkat keras yang terpasang dan terdeteksi dalam sistem Windows. Perangkat keras tersebut bisa berupa harddisk, kartu VGA, sound, keyboard, perangkat USB dan lain-lainnya.
+				
+				\par
+				Fungsi device manager antara lain :
+					\begin{itemize}
+						\item Menunjukkan status mengenai suatu perangkat keras.
+						\item Menunjukkan informasi detail mengenai suatu perangkat keras.
+						\item Mengelola driver perangkat keras.
+						\item Menonaktifkan dan mengaktifkan perangkat keras.
+						\item Mengidentifikasi konflik antar perangkat keras.
+						\item Memberitahukan terjadinya masalah pada perangkat keras.
+					\end{itemize}
+
+				\par
+				Folder /dev merupakan representasi dari drive yang terhubung ke sistem operasi Linux dan oleh sistem dianggap sebagai file-file direktori. Biasanya sering ditampilkan direktori seperti /dev/sda1 yang mewakili Drive SATA pertama dalam sistem.
+				
+			\item Jelaskan langkah-langkah instalasi driver dari arduino!
+				\begin{enumerate}
+					\item Hubungkan sistem minimun Arduino Uno ke komputer dengan kabel USB type B (kabel Printer).
+					\item Lalu pada bagian kanan didesktop PC anda, akan muncul popup Installing device driver software seperti pada gambar dibawah ini.
+					\item Windows tidak menyediakan driver arduino, jadi kita harus menginstal secara manual.
+					\item Buka Device Manager, klik untuk menjalankan.
+					\item Cari Unknown device pada bagian Other device, bila terdapat tanda seru berarti peroses penginstalan belum berhasil sepenuhnya.
+					\item Klik kanan pada Unknown device lalu pilih Update Driver Software.
+					\item Pilih Browse my computer for driver software.
+					\item Arahkan lokasi folder ke folder ..arduino1.0.5 drivers. Pastikan checkbox lalu centang include subfolders. Klik Next untuk melanjutkan instalasi driver.
+					\item Kemudian lanjutkan dengan mengklik Install pada tampilan Windows Security.
+					\item Jika instalasi driver berhasil maka akan muncul Windows has successfully updated your driver software.
+					\item Perhatikan dan ingat nama COM Arduino Uno, karena nama COM ini yang akan digunakan untuk meng-upload program nantinya.
+				\end{enumerate}
+				
+			\item Jelaskan bagaimana cara membaca baudrate dan port dari komputer yang sudah terinstall driver!
+				\begin{itemize}
+					\item Membaca Baudrate dari Komputer
+						\begin{enumerate}
+							\item Pertama buka Start. Cari Device Manager, lalu klik.
+							\item Kemudian pilih Ports (COM \& LPT).
+							\item Klik dua kali pada COM yang terhubung.
+							\item Pilih tab Port Settings, lalu lihat di Bit per second.
+						\end{enumerate}
+					\item Membaca Port dari Komputer
+						\begin{enumerate}
+							\item Pertama buka Start. Cari Device Manager, lalu klik.
+							\item Kemudian pilih Ports (COM \& LPT).
+							\item Port dari Arduino telah terbaca oleh PC.
+						\end{enumerate}
+				\end{itemize}
+							
+			\item Jelaskan sejarah library pyserial!
+			\par 
+			PySerial adalah paket Python yang menfasilitasi komunikasi serial antara PC dengan perangkat keras eksternal. PySerial menyediakan antarmuka untuk berkomunikasi melalui protokol komunikasi serial. Komunikasi serial adalah salah satu protokol komunikasi komputer tertua. Protokol komunikasi serial mendahului spesifikasi USB yang digunakan oleh komputer dan perangkat keras lain seperti mouse, keyboard, dan webcam. USB adalah singkatan dari Universal Serial Bus. USB dan dibangun di atas dan memperluas antarmuka komunikasi serial asli.
+			
+			\item Jelaskan fungsi-fungsi apa saja yang dipakai dari library pyserial!
+			Fungsi-fungsi yang dipakai dari library PySerial, yaitu:
+				\begin{itemize}
+					\item \begin{verbatim} serial \end{verbatim} : fungsi ini untuk membuka port serial.
+					\item \begin{verbatim} write(data) \end{verbatim} : fungsi ini menulis data lewat port serial.
+					\item \begin{verbatim} readline() \end{verbatim} : fungsi ini membaca sebuah string dari port serial.
+					\item \begin{verbatim} read(size) \end{verbatim} fungsi ini untuk membaca jumlah byte dari port serial.
+					\item \begin{verbatim} close() \end{verbatim} : fungsi ini untuk menutup port serial.
+				\end{itemize}
+			
+			\item Jelaskan kenapa butuh perulangan dan tidak butuh perulangan dalam membaca serial!
+			\par
+			Perualangan dalam bahasa pemrograman berfungsi menyuruh komputer melakukan sesuatu secara berulang-ulang. Terdapat dua jenis perualangan dalam bahasa pemrograman python, yaitu perulangan dengan for dan while. Perulangan for disebut counted loop (perulangan yang terhitung), sementara perulangan while disebut uncounted loop (perulangan yang tak terhitung). Perulangan for biasanya digunakan untuk mengulangi kode yang sudah dipastikan banyak perulangannya. Sedangkan while untuk perulangan yang ditentukan dan belum pasti banyaknya. Perulangan diperlukan agar dapat membaca data secara berulang kali sehingga data yang muncul lebih dari satu.  Sedangkan apabila tidak memakai perulangan maka data akan terbaca satu kali saja.
+			
+			\item Jelaskan bagaimana cara membuat fungsi yang mengunakan pyserial!
+				\begin{verbatim}			
+					import serial
+
+					def baca():
+						ser = serial.Serial("COM4",9600)
+						baca = ser.readline()
+						print(baca)
+
+					baca()
+				\end{verbatim}
+				
+			\item Plagiarism
+			\begin{figure}[H]
+				\includegraphics[width=10cm]{figures/5/1174050/Teori/plagiarism.png}
+				\centering
+				\caption{Hasil Scan Plagiarism}
+			\end{figure}
+			
+		\end{enumerate}
