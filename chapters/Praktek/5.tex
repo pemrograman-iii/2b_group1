@@ -65,3 +65,31 @@ Fungsi yang menggunakan try except untuk menanggulangi error.
 	\centering
 	\caption{Hasil pembacaan fungsi untuk menanggulangi error menggunakan Try Except.}
 \end{figure}
+
+\section{Hagan Rowlenstino/1174040}
+	\subsection{Soal 1} 
+		membuat fungsi untuk mendapatkan data langsung dari arduino. disini saya menggunakan arduino dengan servo. disini saya akan menginputkan data berupa angka untuk menambahkan berapa lama cervo kembali dari letak yang di tentukan ke letak awal.
+
+	\lstinputlisting[firstline=1, lastline=13]{src/5/1174040/Praktek/chap5_1174040_realtime.py}
+
+	\subsection{Soal 2}
+	membuat fungsi untuk mendapatkan data langsung dari arduino dengan looping. disini saya menggunakan arduino dengan servo. disini saya akan menginputkan data berupa angka untuk menambahkan berapa lama cervo kembali dari letak yang di tentukan ke letak awal.
+
+	\lstinputlisting{src/5/1174040/Praktek/chap5_1174040_save.py}
+
+	\subsection{Soal 3}
+	membuat fungsi untuk mendapatkan data langsung dari arduino lalu me write data tersebut ke dalam file csv. disini saya menggunakan arduino dengan servo. disini saya akan menginputkan data berupa angka untuk menambahkan berapa lama cervo kembali dari letak yang di tentukan ke letak awal. Nilai inputan tersebutlah yang saya  write ke dalam file 1174040\_realtime2.csv
+
+	\lstinputlisting[firstline=15, lastline=26]{src/5/1174040/Praktek/chap5_1174040_realtime.py}
+
+	\subsection{Soal 4}
+	
+	fungsi untuk membaca csv yang brisikan data dari arduino tadi :
+
+	\lstinputlisting{src/5/1174040/Praktek/chap5_1174040_csv.py}
+
+	\subsection{Penanganan Error}
+	Disini saya mendapatkan Error yaitu FileNotFoundError dimana ada kesalahan saat menginputkan nama file yang akan digunakan, untuk penanganannya yaitu dengan cara menginputkan nama file yang benar 
+
+	\lstinputlisting{src/5/1174040/Praktek/chap5_1174040_err.py}
+	
