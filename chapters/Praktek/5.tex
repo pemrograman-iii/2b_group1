@@ -108,4 +108,52 @@ Fungsi yang menggunakan try except untuk menanggulangi error.
 		
 	\subsection{Penanganan Error}
 		\lstinputlisting[firstline=8, lastline=19]{src/5/1174043/Praktek/chap5_1174043_error.py}
+		
+\section{Luthfi Muhammad Nabil/1174035}
+	\subsection{Soal 1}
+	Membuat fungsi untuk mengambil data langsung dari arduino. 
+	\lstinputlisting[firstline=1, lastline=5]{src/5/1174035/Praktek/chap5_1174035_realtime.py}
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{figures/5/1174035/Praktek/ReadNonLoop.png}
+		\centering
+		\caption{Hasil dari Ambil Data tanpa perulangan}
+	\end{figure}
+	\subsection{Soal 2}
+	Membuat fungsi untuk mengambil data langsung dari arduino dengan looping. 
+	\lstinputlisting{src/5/1174035/Praktek/chap5_1174035_save.py}
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{figures/5/1174035/Praktek/ReadLoop.png}
+		\centering
+		\caption{Hasil dari Ambil Data dengan perulangan}
+	\end{figure}
+	\subsection{Soal 3}
+	Membuat fungsi untuk mengambil data langsung dari arduino lalu me write data tersebut ke dalam file csv.
+	\lstinputlisting[firstline=7]{src/5/1174035/Praktek/chap5_1174035_realtime.py}
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{figures/5/1174035/Praktek/WriteCSV.png}
+		\centering
+		\caption{Menulis data dari serial ke file CSV}
+	\end{figure}
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{figures/5/1174035/Praktek/HasilCSV.png}
+		\centering
+		\caption{Hasil Tulis CSV dengan ambilan tanpa loop}
+	\end{figure}
+	\subsection{Soal 4}
+	Fungsi untuk membaca csv yang berisikan data dari isi serial arduino yang dibaca sebelumnya :
+	\lstinputlisting{src/5/1174035/Praktek/chap5_1174035_save.py}
+	
+	\subsection{Penanganan Error}
+	Error yang didapat : Serial Exception
+	Definisi : Serial Exception terjadi saat koneksi antara serial dan komputer terjadi masalah atau tidak dapat berkomunikasi. Untuk menangani error tersebut dapat menggunakan Try Except.
+	
+	Pemakaian : \lstinputlisting{src/5/1174035/Praktek/chap5_1174035_error.py}
+	
+	Hasil (Saat Error) dapat dilihat pada gambar \ref{Error_1174035}
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{figures/5/1174035/Praktek/Error.png}
+		\centering
+		\caption{Hasil dari Error}
+		\label{Error_1174035}
+	\end{figure}
 	
