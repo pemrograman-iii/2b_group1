@@ -89,3 +89,65 @@
             \caption{Cek Plagiarisme}
             \label{1174040_chap6_plagiat}
             \end{figure}
+			
+\section{Irvan Rizkiansyah/1174043}
+	\subsection{Nomor 1}
+		matplotlib merupakan library plotting 2D Python dan berfungsi untuk membuat plot, histogram, grafik batang, scatterplot, dan masih banyak yang lainnya hanya dengan beberapa baris code saja.
+		
+	\subsection{Nomor 2}
+	Pembuatan sumbu X dan Y di matplotlib, mirip dengan membuat sebuah variabel yang mempunyai array. Kemudian variabel yang dibuat yang nanti-nya akan menjadi sumbu X dan Y dan akan dipanggil menggunakan fungsi plot.
+		\lstinputlisting[firstline=8, lastline=14]{src/6/1174043/Teori/chap6_1174043_no2.py}
+	
+	\subsection{Nomor 3}
+	Perbedaan fungsi yang ada pada matplotlib :
+		\begin{itemize}
+			\item Fungsi scatter atau plot sebaran merupakan sebuah grafik yang menunjukkan hubungan dari dua set data, seperti halnya hubungan dari tinggi badan dan berat badan.
+			Cara menggunakannya dengan memanggil fungsi scatter yang terdapat pada matplotlib \begin{verbatim} matplotlib.pyplot.scatter(x,y) \end{verbatim}
+			
+			\item Fungsi histogram merupakan sebuah grafik yang akan menampilkan frekuensi data menggunakan sebuah batang.
+			Cara menggunakannya dengan memanggil fungsi hist yang terdapat pada matplotlb \begin{verbatim} matplotlib.pyplot.hist(x,y) \end{verbatim}
+			
+			\item Fungsi plot garis atau plot sinus merupakan sebuah grafik yang menunjukkan frekuensi data menggunakan garis.
+			Cara menggunakannya dengan memanggil fungsi plot yang terdapat pada matplotlib \begin{verbatim} matplotlib.pyplot.plot(x,y) \end{verbatim}
+			
+		\end{itemize}
+	Dan masih banyak yang lainnya.
+	\subsection{Nomor 4}
+	Fungsi legend merupakan dimana akan menamai sebuah bar pada grafik untuk membedakan bar tersebut dengan bar yang lainnya, dimana jika terdapat banyak bar pada grafik tersebut. Sedangkan fungsi label untuk menamai sumbu x dan sumbu y.
+	Cara menggunakannya hanya tinggal memanggil fungsi legend dan fungsi label yang terdapat pada matplotlib dan memberikan nama untuk legend dan label tersebut. Contohnya :
+		\lstinputlisting[firstline=8, lastline=19]{src/6/1174043/Teori/chap6_1174043_legend.py}
+	
+	\subsection{Nomor 5}
+	Fungsi subplot adalah untuk memanggil banyak grafik hanyak dengan sekali panggil saja. Cara kerja dari fungsi subplot ini sendiri cukup simpel, dimana cukup memanggil fungsi subplot yang terdapat pada matplotlib 
+	\begin{verbatim} matplotlib.pyplot.subplot(nbaris, nkolom, index) \end{verbatim}
+	Dibawah ini merupakan ilustrasi dan parameter apa saja yang digunakan jika ingin menggambar plot dengan 9 sub plot :
+		\lstinputlisting[firstline=8, lastline=54]{src/6/1174043/Teori/chap6_1174043_subplot.py}
+		
+	\subsection{Nomor 6}
+	Matplotlib mengenal beberapa format untuk color diantaranya :
+		\begin{itemize}
+			\item RGB atau RGBA contohnya (0.1, 0.2, 0.5)
+			\item hex RGB atau RGBA contohnya '\#0F0F0F
+			\item Representasi string dari nilai float contohnya '0.5'
+			\item atau hanya seperti kata awal dari warna tersebut yang ingin digunakan contohnya warna Cyan maka hanya perlu menggunakan 'c', warna Green maka hanya perlu menggunakan 'g' dan masih banyak yang lainnya seperti 'b', 'r', 'm', dan yang lainnya
+			\item X11/CSS4 nama warna
+			\item nama dari xkcd color survey contohnya 'xkcd:sky blue'
+			\item Tableau Color dari 'T10' pallette kategorikal contohnya 'tab:olive'
+			
+		\end{itemize}
+	
+	\subsection{Nomor 7}
+	Fungsi hist merupakan fungsi untuk menggunakan grafik bar atau batang, dimana frekuensi setiap elemen data yang ada pada daftar ditunjukkan dengan grafik histogram. Angka yang dikelompokkan dalam bentuk rentang tertentu yang sudah di tentukan dsebut bins.
+		\lstinputlisting[firstline=8, lastline=12]{src/6/1174043/Teori/chap6_1174043_histogram.py}
+	
+	\subsection{Nomor 8}
+	Parameter yang terdapat pada fungsi pie :
+		\begin{itemize}
+			\item labels : dimana berfungsi untuk memberi nama untuk setiap slice yang terdapat pada grafik pie
+			\item colors : dimana berfungsi untuk memberikan warna untuk setiap slice yang terdapat pada gradik pie
+			\item startangle : dimana berfungsi jika tidak tidak ada, maka awalan putaran dari grafik pie berlawanan dari arah jarum jam dari titik sumbu x
+			\item shadow : dimana berfungsi untuk memberikan efek grafis bayangan pada grafik pie
+			\item explode : dimana berfungsi untuk menentukan fraksi dari jari-jari untuk mengimbangi setiap slice menggunakan sumbu x
+			\item autopct : string atau fungsi yang digunakan untuk label pada slice dengan nilai numerik, maka label akan ditempatkan didalam slice.			
+		\end{itemize}
+	
