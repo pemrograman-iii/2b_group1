@@ -554,3 +554,136 @@ Berikut hasil pengecekan plagiarisme untuk bagian teori.
 	\centering
 	\caption{Plagiarisme}
 \end{figure}
+
+\section{Dika Sukma Pradana 1174050}
+\subsection{Pemahaman Teori}
+\begin{enumerate}
+\item Apa itu fungsi library matplotlib?
+\par
+Matplotlib adalah perpustakaan merencanakan untuk bahasa pemrograman Python dan ekstensi numerik matematika NumPy. Ini menyediakan API berorientasi objek untuk menanamkan plot ke aplikasi menggunakan toolkit GUI untuk tujuan umum seperti Tkinter, wxPython, Qt, atau GTK +. Ada juga antarmuka "pylab" prosedural yang didasarkan pada mesin negara (seperti OpenGL), yang dirancang agar mirip dengan MATLAB, meskipun penggunaannya tidak disarankan. PiPy menggunakan Matplotlib.
+\par
+Matplotlib awalnya ditulis oleh John D. Hunter, memiliki komunitas pengembangan aktif, dan didistribusikan di bawah lisensi gaya BSD. Michael Droettboom dinominasikan sebagai pengembang utama matplotlib sesaat sebelum kematian John Hunter pada Agustus 2012, dan selanjutnya bergabung dengan Thomas Caswell.
+\par
+Pada 23 Juni 2017, matplotlib 2.0.x mendukung versi Python 2.7 hingga 3.6. Matplotlib 1.2 adalah versi pertama dari matplotlib untuk mendukung Python 3.x. Matplotlib 1.4 adalah versi terakhir dari Matplotlib untuk mendukung Python 2.6.
+\par
+Matplotlib telah berjanji untuk tidak mendukung Python 2 hingga 2020 dengan menandatangani Pernyataan Python 3
+
+\item Jelaskan langkah-langkah membuat sumbu X dan Y di matplotlib!
+Pada Matplotlib untuk membuat sumbu X dan Y dapat dilakukan dengan cara yaitu :
+\lstinputlisting[firstline=1, lastline=7]{src/6/1174050/Teori/no2.py}
+
+\item Jelaskan bagaimana perbedaan fungsi dan cara pakai untuk berbagai jenis(bar,histogram,scattdll) jenis plot di matplotlib!
+\begin{itemize}
+\item Sebuah plot sebaran/titik adalah sebuah grafik yang menunjukkan hubungan antara dua set data.
+\lstinputlisting[firstline=1, lastline=6]{src/6/1174050/Teori/scatter.py}
+\begin{figure}[H]
+\centering
+\includegraphics[width=7cm]{figures/6/1174050/Teori/3scatter.png}
+\caption{Scatter}
+\end{figure}
+
+\item Sebuah histogram adalah grafik yang menampilkan frekuensi data menggunakan batang, dimana angka dikelompokkan dalam rentang tertentu. Dengan kata lain, frekuensi setiap elemen data di dalam daftar ditunjukkan menggunakan histogram. Angka yang dikelompokkan dalam bentuk rentang tertentu disebut bins.
+\lstinputlisting[firstline=1, lastline=6]{src/6/1174050/Teori/histo.py}
+\begin{figure}[H]
+\centering
+\includegraphics[width=7cm]{figures/6/1174050/Teori/3histo.png}
+\caption{Histogram}
+\end{figure}
+
+
+\item pie chart adalah diagram yang digunakan untuk membandingkan antar bagian terhadap total. biasanya pie chart dalam bentuk persentase karena nilainya merupakan bagian-bagian yang dijumlah menjadi satu. sehingga bisa lihat kontribusi paling besar atau paling kecil dalam membentuk nilai. Pie chart digunakan untuk perbandingan yang sedikit. pie chart digunakan untuk membandingkan antar bagian terhadap total.
+\lstinputlisting[firstline=1, lastline=23]{src/6/1174050/Teori/pie.py}
+\begin{figure}[H]
+\centering
+\includegraphics[width=7cm]{figures/6/1174050/Teori/3pie.png}
+\caption{pie chart}
+\end{figure}
+
+\item Bagan area benar-benar mirip dengan bagan garis, kecuali area antara sumbu x dan garis diisi dengan warna atau bayangan. Ini mewakili evolusi variabel numerik mengikuti variabel numerik lainnya. Jika kamu ingin mewakili evolusi ini untuk beberapa grup dalam waktu yang bersamaan, Anda mungkin tertarik dengan bagan area bertumpuk, di mana setiap grup ditampilkan satu sama lain.
+\lstinputlisting[firstline=1, lastline=21]{src/6/1174050/Teori/area.py}
+\begin{figure}[H]
+\centering
+\includegraphics[width=7cm]{figures/6/1174050//Teori/area.png}
+\caption{bagan area}
+\end{figure}
+
+\end{itemize}
+
+\item Jelaskan bagaimana cara menggunakan legend dan label serta kaitannya dengan
+fungsi tersebut!
+\par
+Legenda adalah penjelasan garis dilengkapi dengan sampel garis yang dijelaskan. Untuk membuat legenda pada plot anda dapat menggunakan syntax fungsi legend yang dapat dituliskan sebagai berikut:
+\lstinputlisting[firstline=69, lastline=69]{src/6/1174050/Teori/6.py}
+\begin{figure}[H]
+\centering
+\includegraphics[width=4cm]{figures/6/1174050/Teori/legen.png}
+\caption{legend}
+\end{figure}
+\par
+Untuk menambah label pada garis sumbu pada grafik dapat menggunakan syntax fungsi xlabel dan fungsi ylabel pada MATLAB. Kedua label ditulis setelah syntax deklarasi plot.
+\lstinputlisting[firstline=40, lastline=40]{src/6/1174050/Teori/6.py}
+\begin{figure}[H]
+\centering
+\includegraphics[width=4cm]{figures/6/1174050/Teori/label.png}
+\caption{label}
+\end{figure}
+
+
+\item Jelaskan apa fungsi dari subplot di matplotlib, dan bagaimana cara kerja dari
+fungsi subplot, sertakan ilustrasi dan gambar sendiri dan apa parameternya jika
+ingin menggambar plot dengan 9 subplot di dalamnya
+\par
+Pada saat fungsi plot dijalankan, grafik atau gelombang akan ditampilkan dalam figure yang aktif. Untuk beberapa kasus, perlu menampilkan plot grafik atau gelombang dalam figure atau gambar yang berbeda maupun menampilkan lebih dari satu plot dalam satu gambar. Hal ini bisa terjadi jika menggbungkan beberapa plot dalam 1 figure.
+\lstinputlisting[firstline=72, lastline=104]{src/6/1174050/Teori/6.py}
+\begin{figure}[H]
+\centering
+\includegraphics[width=7cm]{figures/6/1174050/Teori/subplot.png}
+\caption{Subplot}
+\end{figure}
+
+
+\item Sebutkan semua parameter color yang bisa digunakan!
+\par
+Kode warna yang digunakan dalam python adalah sebagai berikut:
+R adalah warna Merah
+G adalah warna Hijau
+B adalah warna Biru
+M adalah warna Ungu
+Y adalah warna Kuning
+C adalah warna Biru Muda
+K adalah warna Hitam
+
+\item Jelaskan bagaimana cara kerja dari fungsi hist, sertakan ilustrasi dan gambar
+sendiri!
+\par
+pada fungsi histogram titik koordinat tidak boleh sama karena dalam diagram ini digunakan untuk mendata selisih dari hasil rentang nilai tertentu.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=7cm]{figures/6/1174050/Teori/3histo.png}
+\caption{Histogram}
+\end{figure}
+
+
+\item Jelaskan lebih mendalam tentang parameter dari fungsi pie diantaranya labels,
+colors, startangle, shadow, explode, autopct
+\begin{itemize}
+\item labels digunakan untuk memberi label/penjelasan dari bagian pie chart yang kita buat.
+\item colors digunakan untuk mewarnai pie chart diagram yang telah dibuat, membuat warna yang berbeda antar bagian.
+\item startangle digunakan untuk membuat diagram/chart mem-flip atau berbalik arah.
+\item explode digunakan untuk menonjolkan salah satu bagian dari pie chart.
+\item shadows digunakan untuk memberi bayangan pada pie chart yang kita buat.
+\item autopct digunakan untuk memberi persen dari bagian-bagian pie chart yang kita buat.
+\end{itemize}
+
+\item Bebas Plagiarisme
+\begin{figure}[H]
+\centering
+\includegraphics[width=7cm]{figures/6/1174050/Teori/plagiarism.png}
+\caption{Screenshoot bebas plagiarisme}
+\end{figure}
+
+\end{enumerate}
+
+
+
