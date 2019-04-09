@@ -150,4 +150,154 @@
 			\item explode : dimana berfungsi untuk menentukan fraksi dari jari-jari untuk mengimbangi setiap slice menggunakan sumbu x
 			\item autopct : string atau fungsi yang digunakan untuk label pada slice dengan nilai numerik, maka label akan ditempatkan didalam slice.			
 		\end{itemize}
+
+\section{Luthfi Muhammad Nabil/1174035}
+\subsection{Soal 1}
+Apa itu fungsi library matplotlib
+
+Library matplotlib adalah library bahasa pemrograman python untuk menampilkan grafik - grafik sehingga data dapat divisualisasikan dengan lebih baik. Isi dari grafik tersebut dapat menggunakan data sesuai kebutuhan. Matplotlib sudah digunakan banyak aplikasi data sains untuk menampilkan visualisasi data yang berupa grafik. 
+
+\subsection{Soal 2}
+Jelaskan langkah-langkah membuat sumbu X dan Y di matplotlib
+
+Pada library matplotlib, hanya membutuhkan dua variabel atau dua kumpulan data yang memiliki posisi sama. Isi dari data tersebut menggunakan nilai angka dan isinya dapat berupa integer atau float. Berikut contoh dari koding menampilkan data dengan sumbu X dan Y : 
+\lstinputlisting[firstline=2, lastline=6]{src/6/1174035/Teori/chap6_1174035_Teori.py}
+Berikut hasilnya terdapat pada gambar \ref{Contoh_Soal2}
+\begin{figure} [ht]
+	\centerline{\includegraphics[width=0.6\textwidth]{figures/6/1174035/Teori/Soal2.png}}
+	\caption{Contoh Pengaplikasian Sumbu X dan Y}
+	\label{Contoh_Soal2}
+\end{figure}
+
+\subsection{Soal 3}
+Jelaskan bagaimana perbedaan fungsi dan cara pakai untuk berbagai jenis plot di matplotlib
+\begin{itemize}
+	\item Grafik Garis
 	
+	Untuk plot pada diagram garis, dibutuhkan data nilai angka yang dapat berupa satu atau dua kumpulan data. Berikut pengaplikasian untuk diagram garis : 
+	\lstinputlisting[firstline=9, lastline=12]{src/6/1174035/Teori/chap6_1174035_Teori.py}
+	Atau dapat juga mengubah jalur garis dengan 2 kumpulan angka seperti berikut : 
+	\lstinputlisting[firstline=15, lastline=18]{src/6/1174035/Teori/chap6_1174035_Teori.py}
+	\begin{figure} [ht]
+		\centerline{\includegraphics[width=0.6\textwidth]{figures/6/1174035/Teori/Soal3Garis.png}}
+		\caption{Contoh Grafik Garis}
+		\label{Contoh_Soal3Garis}
+	\end{figure}
+	
+	\item Grafik Titik
+	
+	Untuk plot pada diagram titik, dapat melakukan langkah seperti berikut : 
+	\lstinputlisting[firstline=21, lastline=26]{src/6/1174035/Teori/chap6_1174035_Teori.py}
+	Terlihat perbedaannya pada penambahan parameter ketiga dengan isinya yaitu 'ro'
+	\begin{figure} [ht]
+		\centerline{\includegraphics[width=0.6\textwidth]{figures/6/1174035/Teori/Soal3Titik.png}}
+		\caption{Contoh Grafik Titik}
+		\label{Contoh_Soal3Titik}
+	\end{figure}
+	
+	\item Grafik Batang
+	
+	Untuk plot diagram batang diperlukan koding baru menggunakan plt.bar(). Contoh pengaplikasian dapat diaplikasikan sebagai berikut : 
+	\lstinputlisting[firstline=29, lastline=31]{src/6/1174035/Teori/chap6_1174035_Teori.py}
+	Hasil dapat dilihat pada gambar \ref{Contoh_Soal3Batang}
+	\begin{figure} [ht]
+		\centerline{\includegraphics[width=0.6\textwidth]{figures/6/1174035/Teori/Soal3Batang.png}}
+		\caption{Contoh Grafik Batang}
+		\label{Contoh_Soal3Batang}
+	\end{figure}
+	
+	\item Grafik Lingkaran
+	
+	Untuk plot diagram batang perlu menggunakan subplot. Berikut contoh pengaplikasiannya : 
+	\lstinputlisting[firstline=34, lastline=43]{src/6/1174035/Teori/chap6_1174035_Teori.py}
+	Hasil dapat dilihat pada gambar \ref{Contoh_Soal3Pie}
+	\begin{figure} [ht]
+		\centerline{\includegraphics[width=0.6\textwidth]{figures/6/1174035/Teori/Soal3Pie.png}}
+		\caption{Contoh Grafik Pie}
+		\label{Contoh_Soal3Pie}
+	\end{figure}
+\end{itemize}
+
+\subsection{Soal 4}
+Jelaskan bagaimana cara menggunakan legend dan label serta kaitannya dengan fungsi tersebut
+\begin{itemize}
+\item Label
+
+Untuk menggunakan label, hanya perlu menambahkan sintaks plt.xlabel() atau plt.ylabel(). Label berfungsi untuk memberikan label pada setiap garis atau label untuk gambar yang ada. Berikut contoh untuk menambahkan label pada matplotlib : 
+\lstinputlisting[firstline=46, lastline=52]{src/6/1174035/Teori/chap6_1174035_Teori.py}
+Pada sintaks berikut, akan menambahkan label pada sumbu x dengan tulisan 'X', begitu juga dengan sumbu y dengan label 'Y'. Berikut hasilnya pada gambar \ref{Contoh_Soal4Label} 
+\begin{figure} [ht]
+	\centerline{\includegraphics[width=0.6\textwidth]{figures/6/1174035/Teori/Soal4Label.png}}
+	\caption{Contoh Pengaplikasian Label}
+	\label{Contoh_Soal4Label}
+\end{figure}
+
+\item Legend
+
+Untuk menggunakan legend, perlu mengadakan label saat menginisiasi sebuah plot. Berikut contoh penggunaan legend : 
+\lstinputlisting[firstline=54, lastline=59]{src/6/1174035/Teori/chap6_1174035_Teori.py}
+
+Pada sintaks plt.plot(), terdapat parameter untuk menginput label yang isinya 'Garis Satu' untuk mengatur isi atau judul dari label tersebut. Lalu plt.legend() adalah sintaks untuk menunjukan legend yang akan dimunculkan. Berikut contoh dari pengaplikasiannya pada gambar \ref{Contoh_Soal4Legend} 
+\begin{figure} [ht]
+	\centerline{\includegraphics[width=0.6\textwidth]{figures/6/1174035/Teori/Soal4Legend.png}}
+	\caption{Contoh Pengaplikasian Legend}
+	\label{Contoh_Soal4Legend}
+\end{figure}
+\end{itemize}
+
+\subsection{Soal 5}
+Jelaskan apa fungsi dari subplot di matplotlib, dan bagaimana cara kerja dari fungsi subplot
+
+Subplot adalah fungsi untuk menampilkan beberapa diagram pada satu aplikasi atua sintaks. Untuk menginisiasi subplot, dapat menggunakan fungsi plt.subplot() dan memasukan ukuran subplot di dalamnya (Contoh : plt.subplot(331)). Pada fungsi plt.subplot(331), angka pertama pada contoh merupakan jumlah baris yang dapat dipakai dan angka kedua merupakan jumlah kolom yang dapat dipakai sedangkan angka ketiga merupakan di baris dan kolom berapa grafik akan disimpan. Posisi grafik dimulai dari kiri atas dan berpindah ke kanan dan jika sudah mencapai batas kolom maka akan berpindah ke baris selanjutnya yang dimulai dari kiri kembali. Contoh penggunaan subplot : 
+\lstinputlisting[firstline=61, lastline=103]{src/6/1174035/Teori/chap6_1174035_Teori.py}
+Berikut hasil yang didapat pada koding berikut ditampilkan pada gambar \ref{Contoh_Soal5}
+\begin{figure} [ht]
+	\centerline{\includegraphics[width=0.6\textwidth]{figures/6/1174035/Teori/Soal5.png}}
+	\caption{Contoh Pengaplikasian Subplot}
+	\label{Contoh_Soal5}
+\end{figure}
+
+\subsection{Soal 6}
+Sebutkan semua parameter color yang bisa digunakan
+
+\begin{itemize}
+	\item b : Untuk memberikan warna biru
+	\item g : Untuk memberikan warna hijau
+	\item r : Untuk memberikan warna merah
+	\item c : Untuk memberikan warna biru muda
+	\item m : Untuk memberikan warna pink
+	\item y : Untuk memberikan warna kuning
+	\item k : Untuk memberikan warna hitam
+	\item w : Untuk memberikan warna putih
+\end{itemize}
+
+\subsection{Soal 7}
+Jelaskan bagaimana cara kerja dari fungsi hist
+
+Fungsi hist pada library matplotlib yaitu menhistorgramkan kumpulan data yang akan ditampilkan biasanya berupa grafik batang. Grafik akan dimasukkan beberapa data dan diambil frekuensi dari data tersebut. Berikut contoh koding dari histogram : 
+\lstinputlisting[firstline=106, lastline=113]{src/6/1174035/Teori/chap6_1174035_Teori.py}
+Berikut hasil dari histogram yang ada pada gambar \ref{Contoh_Soal7}
+\begin{figure} [ht]
+	\centerline{\includegraphics[width=0.6\textwidth]{figures/6/1174035/Teori/Soal7.png}}
+	\caption{Contoh Pengaplikasian Histogram}
+	\label{Contoh_Soal7}
+\end{figure}
+\subsection{Soal 8}
+Jelaskan lebih mendalam tentang parameter dari fungsi pie.
+
+\begin{itemize}
+	\item labels : Isi dengan tipe data list dan tidak wajib untuk digunakan. Fungsi parameter labels untuk memberi label pada setiap pecahan data yang ada pada grafik pie yang ditampilkan.
+	\item colors : Tipe data array atau sejenis dan tidak wajib untuk digunakan. Fungsi parameter colors untuk mengganti warna pada setiap pecahan yang ada. Jika tidak digunakan atau ditentukan, maka warna yang akan dipakai adalah warna yang aktif atau standar.
+	\item startangle : Tipe data pecahan atau float, tidak wajib untuk digunakan. Fungsi parameter startangle adalah fungsi untuk memutar grafik agar berubah posisi dengan acuan yaitu angle awalan dari grafik pie.
+	\item shadow : Bertipe data boolean dan tidak wajib digunakan. Fungsi parameter shadow digunakan untuk membuat bayangan pada bawah grafik pie yang ditampilkan. 
+	\item explode : Bertipe data array atau sejenis dan tidak wajib digunakan. Fungsi parameter explode adalah menentukan radius untuk mengimbangi setiap pecahan pada grafik pie. Jika radius lebih dari 0 maka pecahan akan mulai menjauh dari pusat dan terlihat seperti keluar dari grafik lingkaran tersebut.
+	\item autopct : Bertipe data string atau fungsi dan tidak wajib digunakan. Fungsi parameter autopct adalah memberi label pada irisan dengan labelnya berupa fungsi atau string. 
+\end{itemize}
+
+\subsection{Plagiarisme}
+Berikut hasil pengecekan plagiarisme untuk bagian teori terdapat pada gambar \ref{Plagiarisme}.
+\begin{figure} [ht]
+	\centerline{\includegraphics[width=0.6\textwidth]{figures/6/1174035/Teori/Plagiarisme.png}}
+	\caption{Cek Plagiarisme}
+	\label{Plagiarisme}
+\end{figure}
