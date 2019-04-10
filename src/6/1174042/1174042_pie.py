@@ -21,4 +21,3 @@ def pie():
         plt.subplots_adjust(hspace=.4)
     
     plt.show()
-    
